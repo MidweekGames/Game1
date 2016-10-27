@@ -5,10 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\plane</sprite>
+    <sprite>sprites\sprite1</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <shaders name="shaders"/>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
