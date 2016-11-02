@@ -4,15 +4,29 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_machinegun</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_FallingBomb</sprite>
     <sprite>sprites\s_RedBaron</sprite>
     <sprite>sprites\s_minipew</sprite>
     <sprite>sprites\s_pew</sprite>
+    <sprite>sprites\spr_plane_dummy1</sprite>
+    <sprite>sprites\spr_projectile_dummy</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pt_enemy_plane1</path>
+    <path>paths\pt_enemy_plane2</path>
+  </paths>
+  <objects name="objects">
+    <object>objects\obj_enemy_plane</object>
+    <object>objects\obj_projectile</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_level2</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
