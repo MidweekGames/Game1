@@ -5,7 +5,12 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\s_FallingBomb</sprite>
+    <sprite>sprites\s_RedBaron</sprite>
+    <sprite>sprites\s_minipew</sprite>
+    <sprite>sprites\s_pew</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <help>
