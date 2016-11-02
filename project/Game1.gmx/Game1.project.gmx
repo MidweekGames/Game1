@@ -5,9 +5,24 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_mock_player</sprite>
+    <sprite>sprites\spr_mock_bullet</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgr_mock</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_player.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <object>objects\obj_bullet</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_level_1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
