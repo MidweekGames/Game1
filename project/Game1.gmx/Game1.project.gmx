@@ -8,7 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_mock_player</sprite>
     <sprite>sprites\spr_mock_bullet</sprite>
-	<sprite>sprites\s_FallingBomb</sprite>
+    <sprite>sprites\s_FallingBomb</sprite>
     <sprite>sprites\s_RedBaron</sprite>
     <sprite>sprites\s_minipew</sprite>
     <sprite>sprites\s_pew</sprite>
