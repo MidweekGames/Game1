@@ -24,6 +24,7 @@ if keyboard_check(vk_down)
     movement_v += 1;
 }
 input_primary_gun = keyboard_check(vk_space);
+input_secondary_gun = keyboard_check(vk_lcontrol);
 
 // Calculate speed
 if (movement_v == 0)
@@ -113,10 +114,21 @@ else if (y + vspeed > room_height - sprite_height)
 if (input_primary_gun)
 {
     var time = current_time;
-    if (time - primary_last_fired > 1000/fire_rate)
+    if (time - primary_last_fired > 1000/primary_fire_rate)
     {
         primary_last_fired = time;
         instance_create(x + sprite_width * 0.5, y, obj_bullet);
+    }
+}
+if (input_secondary_gun && bomb_count > 0)
+{
+    var time = current_time;
+    if (time - secondary_last_fired > 1000/secondary_fire_rate)
+    {
+        secondary_last_fired = time;
+        var bomb = instance_create(x + sprite_width * 0.5, y, obj_bomb);
+        bomb.vspeed = vspeed + 1;
+        bomb_count--;
     }
 }
 

@@ -6,8 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_mock_player</sprite>
-    <sprite>sprites\spr_mock_bullet</sprite>
     <sprite>sprites\s_FallingBomb</sprite>
     <sprite>sprites\s_RedBaron</sprite>
     <sprite>sprites\s_minipew</sprite>
@@ -22,10 +20,12 @@
   <scripts name="scripts">
     <script>scripts\scr_player.gml</script>
     <script>scripts\scr_plane_animation.gml</script>
+    <script>scripts\scr_draw_ammo.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_bomb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level_1</room>
