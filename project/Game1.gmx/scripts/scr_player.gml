@@ -127,7 +127,8 @@ if (input_secondary_gun && bomb_count > 0)
     {
         secondary_last_fired = time;
         var bomb = instance_create(x + sprite_width * 0.5, y, obj_bomb);
-        bomb.vspeed = vspeed + 1;
+        bomb.vspeed = vspeed;
+        bomb.hspeed = hspeed;
         bomb_count--;
     }
 }

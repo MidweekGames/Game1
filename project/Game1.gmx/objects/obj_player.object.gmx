@@ -34,8 +34,8 @@ input_primary_gun = false;
 input_secondary_gun = false;
 
 // Movement
-acceleration_v = 1;
-acceleration_h = 1;
+acceleration_v = 0.2;
+acceleration_h = 0.2;
 hspeed = 0;
 vspeed = 0;
 deceleration_v = 0.5;
