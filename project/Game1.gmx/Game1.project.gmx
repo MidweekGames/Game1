@@ -12,6 +12,7 @@
     <sprite>sprites\s_RedBaron</sprite>
     <sprite>sprites\s_minipew</sprite>
     <sprite>sprites\s_pew</sprite>
+    <sprite>sprites\s_ZedJet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_mock</background>
