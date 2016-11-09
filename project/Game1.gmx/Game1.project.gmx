@@ -15,10 +15,12 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_mock</background>
+    <background>background\bgr_sea</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_player.gml</script>
+    <script>scripts\scr_plane_animation.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

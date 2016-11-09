@@ -1,3 +1,9 @@
+step_index++;
+if (step_index == 1000000)
+{
+    step_index = 0;
+}
+
 // Inputs
 movement_h = 0;
 movement_v = 0;
@@ -71,6 +77,16 @@ if (speed > max_speed)
     hspeed = sign(hspeed) * sqrt(max_speed * max_speed - vspeed * vspeed);
 }
 
+// Room background speed
+/*if (vspeed > 0)
+{
+    background_vspeed[0] = vspeed + (1 / (max_speed_h - vspeed));
+}
+else
+{
+    background_vspeed[0] = 3 - vspeed/max_speed_h;
+}*/
+
 // Boundaries
 if (x + hspeed < 0)
 {
@@ -102,4 +118,10 @@ if (input_primary_gun)
         primary_last_fired = time;
         instance_create(x + sprite_width * 0.5, y, obj_bullet);
     }
+}
+
+// Fuel Consumption
+if (step_index % room_speed == 0)
+{
+    fuel--;
 }
