@@ -63,6 +63,7 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_start</sound>
+    <sound>sound\snd_pause</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_FallingBomb</sprite>
@@ -103,6 +104,7 @@
     <object>objects\obj_prologue</object>
     <object>objects\obj_push_start</object>
     <object>objects\obj_logo</object>
+    <object>objects\obj_pause</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
