@@ -22,11 +22,23 @@
     <script>scripts\scr_player.gml</script>
     <script>scripts\scr_plane_animation.gml</script>
     <script>scripts\scr_draw_ammo.gml</script>
+    <scripts name="UI">
+      <script>scripts\scr_draw_score.gml</script>
+      <script>scripts\scr_draw_score_effect.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_score</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_bomb</object>
+    <object>objects\obj_controller</object>
+    <object>objects\obj_temp_enemy</object>
+    <objects name="UI">
+      <object>objects\obj_score</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level_1</room>
