@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
-    <datafiles number="3" name="music">
+  <datafiles number="4" name="datafiles">
+    <datafiles number="4" name="music">
       <datafile>
         <name>aspire.mptm</name>
         <exists>-1</exists>
@@ -56,6 +56,23 @@
         </ConfigOptions>
         <filename>revenge.mptm</filename>
       </datafile>
+      <datafile>
+        <name>Game1Theme_1.wav</name>
+        <exists>-1</exists>
+        <size>29068982</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Game1Theme_1.wav</filename>
+      </datafile>
     </datafiles>
   </datafiles>
   <NewExtensions>
@@ -73,6 +90,7 @@
     <sprite>sprites\s_ZedJet</sprite>
     <sprite>sprites\s_EnemyAircraftONE</sprite>
     <sprite>sprites\s_logo</sprite>
+    <sprite>sprites\s_EnemyAircraft2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_mock</background>
