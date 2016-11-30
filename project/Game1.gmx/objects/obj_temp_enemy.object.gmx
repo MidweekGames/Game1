@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -29,8 +29,40 @@
 
 ins_player = instance_find(obj_player, 0);
 
-max_speed = 3;
+acceleration = 0.2;
+max_speed = 8;
+
+last_fired = 0;
+fire_rate = 10; // bullets/second
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>s_ZedJet</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -84,18 +116,126 @@ max_speed = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = point_direction(x, y, ins_player.x, ins_player.y);
+            <string>var target_x = ins_player.x + 32;
+var target_y = ins_player.y + 32;
 
-vspeed -= sin (dir * (180/pi));
-hspeed += cos (dir * (180/pi));
+var dir = point_direction(x, y, target_x, target_y);
+
+vspeed -= acceleration * sin (dir * (pi/180));
+hspeed += acceleration * cos (dir * (pi/180));
+
+// Avoid allies
+var temp_x = x;
+var temp_y = y;
+x = -10000;
+y = -10000;
+var nearestAlly = instance_nearest(temp_x, temp_y, obj_enemy);
+x = temp_x;
+y = temp_y;
+if (distance_to_point(nearestAlly.x, nearestAlly.y) &lt; 64)
+{
+    dir = point_direction(x, y, nearestAlly.x, nearestAlly.y);
+    
+    vspeed += acceleration * 0.5 * sin (dir * (pi/180));
+    hspeed -= acceleration * 0.5 * cos (dir * (pi/180));
+}
 
 speed = max_speed;
+
+// If almost aligned and no allies in the way, fire!!!
+if (abs(direction - point_direction(x, y, target_x, target_y)) &lt; 10)
+{
+    if (!collision_line(x, y, target_x, target_y, obj_enemy, false, true))
+    {
+        var time = current_time;
+        if (time - last_fired &gt; 1000/fire_rate)
+        {
+            last_fired = time;
+            bullet = instance_create(x, y, obj_enemy_bullet_1);
+            bullet.direction = direction;
+            bullet.speed = 20;
+        }
+    }
+    
+}
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>542</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_transform</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>direction + 90</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
