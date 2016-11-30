@@ -91,6 +91,9 @@
     <sprite>sprites\s_EnemyAircraftONE</sprite>
     <sprite>sprites\s_logo</sprite>
     <sprite>sprites\s_EnemyAircraft2</sprite>
+    <sprite>sprites\s_MachineGunFire1</sprite>
+    <sprite>sprites\s_MachineGunFire2</sprite>
+    <sprite>sprites\s_CruiseMissile</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_mock</background>
