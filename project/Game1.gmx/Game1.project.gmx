@@ -94,6 +94,8 @@
     <sprite>sprites\s_MachineGunFire1</sprite>
     <sprite>sprites\s_MachineGunFire2</sprite>
     <sprite>sprites\s_CruiseMissile</sprite>
+    <sprite>sprites\s_SmallExplosion</sprite>
+    <sprite>sprites\s_LargeExplosion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_mock</background>
@@ -126,6 +128,7 @@
     <object>objects\obj_push_start</object>
     <object>objects\obj_logo</object>
     <object>objects\obj_pause</object>
+    <object>objects\obj_CruiseMissile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>

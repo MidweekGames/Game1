@@ -60,6 +60,8 @@ controller = instance_create(0, 0, obj_controller);</code>
     <instance objName="obj_temp_enemy" x="1536" y="864" name="inst_7B4D496B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_temp_enemy" x="1152" y="864" name="inst_480BAFB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="0" y="0" name="inst_03DDFD21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_CruiseMissile" x="1088" y="160" name="inst_90E79C4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_CruiseMissile" x="1472" y="160" name="inst_39755E24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
